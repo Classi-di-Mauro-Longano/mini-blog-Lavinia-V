@@ -46,47 +46,33 @@ header nav ul {
     flex-wrap: wrap;
 }
 
-@media(min-width="700x") {
-    header nav ul li {
-        list-style: none;
-        padding-left: 30px;
-    }
-}
-
-@media (max-width="320") {
-    header nav ul li:first-child {
-        padding-left: 0px;
-    }
-}
-
-
-header nav ul li a {
+/*stile voci menù*/
+header nav ul a {
     text-decoration: none;
     color: var(--c-black-20);
     font-size: var(--fs-xx-small);
     font-weight: bold;
 }
 
+/*grandezza immagine*/
 header img.logo {
     width: 80px;
 }
 
+/*stile testo paragrafo*/
 p {
     text-align: justify;
     color: var(--c-black-20);
 }
 
+/*stile testo sopra titolo*/
 header p {
     color: var(--c-black-20);
     font-size: var(--fs-xx-small);
     font-weight: bold;
 }
 
-header p> :first-child {
-    color: var(--c-black-30);
-    font-size: var(--fs-x-small);
-}
-
+/*flexbox del footer dell'article*/
 footer {
     display: flex;
     justify-content: space-between;
@@ -95,12 +81,14 @@ footer {
     align-self: end;
 }
 
+/*stile della classe time to read*/
 footer .time-to-read {
     font-size: var(--fs-xx-small);
     font-weight: bold;
     color: rgba(110, 110, 110, 1);
 }
 
+/*stile della classe read full*/
 footer .read-full {
     font-size: var(--fs-x-small);
     font-weight: bold;
@@ -112,14 +100,12 @@ footer .read-full {
     padding: 0px;
 }
 
+/*rimuove sottolineatura della classe read full*/
 footer a.read-full {
     text-decoration: none;
 }
 
-footer .read-full img {
-    filter: var(--c-primary-svg);
-}
-
+/*suddivide i vari article*/
 article {
     border: solid var(--c-border) 1px;
     border-radius: 5px;
@@ -150,18 +136,14 @@ article {
     }
 }
 
+/*spazi*/
 article h2,
 article h1 {
     padding: 0;
     margin: 8px 0 0 0;
 }
 
-article p {
-    padding: 0;
-    margin: 0;
-}
-
-@media(min-width="700x") {
+@media(min-width="1024x") {
     article.main {
         display: flex;
         flex-wrap: wrap;
@@ -170,20 +152,11 @@ article p {
     }
 }
 
+/*ingrandisce e diminuisce dimensioni immagine main in base larghezza schermo*/
 article.main>img {
     width: 100%;
     height: 100%;
     padding-right: 20px;
     object-fit: contain;
     flex: 1 1 500px;
-}
-
-
-
-div.main-article {
-    flex: 1 1 200px;
-}
-
-div.content {
-    flex: 1 1 200px;
 }
